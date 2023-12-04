@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt=br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | github.com/mathalcan</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+
+    <!--JS & jQuery-->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="container">
+
+
+        <div class="box-login">
+
+
+            <div class="box-account">
+                <h2>informe seus dados</h2>
+                <input type="text" name="username" id="username" placeholder="Nome">
+                <input type="email" name="email" id="email" placeholder="E-mail">
+                <input type="email" name="cmail" id="cmail" placeholder="Confirmar o e-mail">
+                <input type="password" name="password" id="password" placeholder="Senha">
+                <input type="password" name="cpassword" id="cpassword" placeholder="Confirmar a senha">
+
+                <div class="check">
+                    <input type="checkbox" name="termo" id="termo" style="width: 13px; height: 13px;">
+                    <label for="termos" style="color: #3d3d3d;">li e aceito os termos</label>
+                </div>
+    
+                <button onclick="validarFormulario()">Criar conta</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        function validarFormulario() {
+            // Obtém o valor do campo de e-mail
+            var email = document.getElementById('email').value;
+
+            // Expressão regular para verificar o formato do e-mail
+            var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // Verifica se o e-mail atende ao padrão
+            if (!regex.test(email)) {
+                alert("Por favor, insira um endereço de e-mail válido.");
+                return false;
+            }
+
+        }
+
+    </script>
+</body>
+</html>
